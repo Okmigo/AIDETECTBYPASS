@@ -22,3 +22,8 @@ async def detect(input: TextInput):
         loss = GPT2_MODEL(inputs, labels=inputs).loss
     perplexity = torch.exp(loss).item()
     return {"perplexity": perplexity}
+
+@app.get("/debug")
+def debug():
+    import torch
+    return {"torch_version": torch.__version__}
