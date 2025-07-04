@@ -1,11 +1,13 @@
+substitutions:
+  _PROJECT_ID: aidetectbypass-464900
 steps:
   - name: 'gcr.io/cloud-builders/docker'
     args:
       [
         'build',
-        '-t', 'gcr.io//text-detector-api',
+        '-t', 'gcr.io/${_PROJECT_ID}/text-detector-api',
         '-f', 'Dockerfile',
         '.'
       ]
 images:
-  - 'gcr.io//text-detector-api'
+  - 'gcr.io/${_PROJECT_ID}/text-detector-api'
