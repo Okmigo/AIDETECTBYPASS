@@ -1,6 +1,7 @@
 .git
 .gitignore
 Dockerfile
+cloudbuild.yaml
 *.pyc
 __pycache__/
 .env
